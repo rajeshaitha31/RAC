@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Selenium-Automation" parallel="tests" thread-count="2"
+	preserve-order="false" configfailurepolicy="continue" junit="false"
+	skipfailedinvocationcounts="false"  data-provider-thread-count="10"
+	group-by-instances="false" allow-return-values="false" >
+	<listeners>
+		<listener class-name="com.web.automation.listeners.ExecutionListener" />
+	</listeners>
+	<test name="Test-mobile-native" junit="false"
+		skipfailedinvocationcounts="false" preserve-order="true"
+		group-by-instances="false" allow-return-values="false" >
+		<parameter name="platform" value="windows" />
+		<parameter name="browser" value="chrome" />
+		<parameter name="version" value="6.0.1" />
+		<parameter name="environment" value="UAT" />
+		<parameter name="userRegion" value="US" />
+		<parameter name="seleniumGrid" value="false" />
+		<parameter name="localExecution" value="true" />
+		<parameter name="cloudExecution" value="false" />
+		
+		<parameter name="emailReport" value="false" />
+		<groups>
+			<run>
+				<include name="smoke" /> <include name="regression" />
+			</run>
+		</groups>
+		<classes>
+				
+	<!-- 	         <class name="com.web.HybrisAutomation.NonVAFormScripts.Hybris_StartOrder_HomePage"></class>
+                    <class name="com.web.HybrisAutomation.NonVAFormScripts.Hybris_StartOrder_HomePage_withIPO">  </class> 
+                  <class name="com.web.HybrisAutomation.NonVAFormScripts.Hybris_StartOrder_GlobalHeader">  </class>
+                  <class name="com.web.HybrisAutomation.NonVAFormScripts.Hybris_StartOrder_WithProduct_WithoutIPO">  </class>
+                  <class name="com.web.HybrisAutomation.NonVAFormScripts.Hybris_StartOrder_WithProduct_withIPO"> </class> 
+ -->
+            
+            
+            
+                     <!-- <class name="com.web.HybrisAutomation.NonVAFormScripts.Hybris_StartOrder_SemiMonthlyWithProduct_WithIPO"> </class>
+                    <class name="com.web.HybrisAutomation.NonVAFormScripts.Hybris_StartOrder_MonthlyWithProduct_WithIPO"> </class>             
+       		         <class name="com.web.HybrisAutomation.NonVAFormScripts.Hybris_StartOrder_MonthlyWithProduct_WithoutIPO"> </class> 
+       		         <class name="com.web.HybrisAutomation.ReservationScripts.Hybris_Reservations_MonthlyPricing"> </class> 
+       		          <class name="com.web.HybrisAutomation.ReservationScripts.Hybris_Reservations_BiWeeklyPricing_SkipPayfone_SkipIDV_PromoApplied"> </class>       		          
+                     <class name="com.web.HybrisAutomation.NonVAFormScripts.Hybris_StartOrder_SemiMonthlyWithProduct_WithoutIPO"> </class>              
+   
+   					<class name="com.web.HybrisAutomation.ReservationScripts.Hybris_Reservations_BiWeeklyPricing_PromoApplied_Paypal"> </class>     		
+       		 		<class name="com.web.HybrisAutomation.ReservationScripts.Hybris_Reservations_BiWeeklyPricing_Paypal"></class>  
+       		 		<class name="com.web.HybrisAutomation.ReservationScripts.Hybris_Reservations_BiWeeklyPricing_PromoApplied"> </class>       		 		
+       		 		<class name="com.web.HybrisAutomation.ReservationScripts.Hybris_Reservations_BiWeeklyPricing">  </class>   
+       		 		  <class name="com.web.HybrisAutomation.ReservationScripts.Hybris_Reservations_BiWeeklyPricing_SkipPayfone_SkipIDV_PromoApplied_Paypal"> </class> 
+       		 		<class name="com.web.HybrisAutomation.ReservationScripts.Hybris_Reservations_BiWeeklyPricing_SkipPayfone_SkipIDV_Paypal"> </class>
+       		 		<class name="com.web.HybrisAutomation.ReservationScripts.Hybris_Reservations_BiWeeklyPricing_SkipPayfone_SkipIDV_PromoApplied"> </class> 
+       		 	 	<class name="com.web.HybrisAutomation.ReservationScripts.Hybris_Reservations_BiWeeklyPricing_SkipPayfone_SkipIDV"> </class> -->
+       		
+ 				 	<!--<class name="com.web.HybrisAutomation.ReservationScripts.Hybris_Reservations_MonthlyPricing_PromoApplied_Paypal"> </class> 
+ 					<class name="com.web.HybrisAutomation.ReservationScripts.Hybris_Reservations_MonthlyPricing_Paypal"> </class>  		
+       		 		<class name="com.web.HybrisAutomation.ReservationScripts.Hybris_Reservations_MonthlyPricing_PromoApplied"> </class>
+       		 		<class name="com.web.HybrisAutomation.ReservationScripts.Hybris_Reservations_MonthlyPricing"> </class> 
+       		 	  <class name="com.web.HybrisAutomation.ReservationScripts.Hybris_Reservations_MonthlyPricing_SkipPayfone_SkipIDV_PromoApplied_Paypal"> </class>
+       		 		 <class name="com.web.HybrisAutomation.ReservationScripts.Hybris_Reservations_MonthlyPricing_SkipPayfone_SkipIDV_Paypal"> </class>
+       		 		<class name="com.web.HybrisAutomation.ReservationScripts.Hybris_Reservations_MonthlyPricing_SkipPayfone_SkipIDV_PromoApplied"> </class>
+       		 		<class name="com.web.HybrisAutomation.ReservationScripts.Hybris_Reservations_MonthlyPricing_SkipPayfone_SkipIDV"> </class> --> 
+       		 		
+       		 		
+       		 	 	<!-- <class name="com.web.HybrisAutomation.ReservationScripts.Hybris_Reservations_SemiMonthlyPricing_PromoApplied_Paypal"> </class>  		
+       		 		<class name="com.web.HybrisAutomation.ReservationScripts.Hybris_Reservations_SemiMonthlyPricing_PromoApplied"></class>
+       		 		<class name="com.web.HybrisAutomation.ReservationScripts.Hybris_Reservations_SemiMonththlyPricing_Paypal"></class> 
+       		 		<class name="com.web.HybrisAutomation.ReservationScripts.Hybris_Reservations_SemiMonththlyPricing"> </class> 
+       		 		 <class name="com.web.HybrisAutomation.ReservationScripts.Hybris_Reservations_SemiMonthlyPricing_SkipPayfone_SkipIDV_PromoApplied_Paypal"> </class>
+       		 		<class name="com.web.HybrisAutomation.ReservationScripts.Hybris_Reservations_SemiMonththlyPricing_SkipPayfone_SkipIDV_Paypal"> </class>
+       		 		<class name="com.web.HybrisAutomation.ReservationScripts.Hybris_Reservations_SemiMonthlyPricing_SkipPayfone_SkipIDV_PromoApplied"> </class>
+       		 		<class name="com.web.HybrisAutomation.ReservationScripts.Hybris_Reservations_SemiMonththlyPricing_SkipPayfone_SkipIDV"> </class> -->
+       		 		
+       		 		
+       		 	<!--	<class name="com.web.HybrisAutomation.ReservationScripts.Hybris_Reservations_WeeklyPricing_PromoApplied_Paypal"> </class>    		
+       		 		<class name="com.web.HybrisAutomation.ReservationScripts.Hybris_Reservations_WeeklyPricing_PromoApplied"> </class>
+       		 		<class name="com.web.HybrisAutomation.ReservationScripts.Hybris_Reservations_WeeklyPricing_Paypal">  </class>
+       		 		<class name="com.web.HybrisAutomation.ReservationScripts.Hybris_Reservations_WeeklyPricing"> </class> 
+       		 		 <class name="com.web.HybrisAutomation.ReservationScripts.Hybris_Reservations_WeeklyPricing_SkipPayfone_SkipIDV_PromoApplied_Paypal"> </class>
+       		 		<class name="com.web.HybrisAutomation.ReservationScripts.Hybris_Reservations_WeeklyPricing_SkipPayfone_SkipIDV_Paypal"> </class>
+       		 		<class name="com.web.HybrisAutomation.ReservationScripts.Hybris_Reservations_WeeklyPricing_SkipPayfone_SkipIDV_PromoApplied"> </class>
+       		 		<class name="com.web.HybrisAutomation.ReservationScripts.Hybris_Reservations_WeeklyPricing_SkipPayfone_SkipIDV"> </class>-->
+       		 		
+       		
+       				 <class name="com.web.HybrisAutomation.CheckoutScripts.Hybris_Checkouts_WeeklyPricing_SkipPayfone"> </class> 
+       			 	<!--<class name="com.web.HybrisAutomation.MyAccountScripts.Hybris_MyAccount_AddPaypalPaymentMehod_ValidData"> </class> -->
+       		
+       		     		 
+       		
+       		
+       		
+       		
+       		<!--  <class name="com.web.HybrisAutomation.NonVAFormScripts.Hybris_HTWOF_MonthlyPricing"> </class>
+            <class name="com.web.HybrisAutomation.NonVAFormScripts.Hybris_HTWOF_WeeklyPricing"> </class>
+            <class name="com.web.HybrisAutomation.NonVAFormScripts.Hybris_HTWOF_SemiMonthlyPricing"> </class> 
+             <class name="com.web.HybrisAutomation.NonVAFormScripts.Hybris_HTWOF_WithOnlyMandatoryData"> </class>
+            <class name="com.web.HybrisAutomation.NonVAFormScripts.Hybris_HTWOF_WithEmploymentDetailsOnly"> </class>
+              <class name="com.web.HybrisAutomation.NonVAFormScripts.Hybris_HTWOF_WithOnlyReferenceDetails"> </class>             
+ -->
+ 
+ 
+ 
+ 
+  <!--  <class name="com.web.HybrisAutomation.NonVAFormScripts.Hybris_WOFWithoutProduct_WithoutIPO_OnlyMandatoryData"> </class> 
+  <class name="com.web.HybrisAutomation.NonVAFormScripts.Hybris_WOFWithoutProduct_WithoutIPO_OnlyEmploymentData"> </class> -->
+  <!--<class name="com.web.HybrisAutomation.NonVAFormScripts.Hybris_WOFWithoutProduct_WithoutIPO_OnlyReferenceData"> </class> 
+  <class name="com.web.HybrisAutomation.NonVAFormScripts.Hybris_WOFWithoutProduct_WithIPO_OnlyMandatoryData"> </class> 
+  <class name="com.web.HybrisAutomation.NonVAFormScripts.Hybris_WOFWithoutProduct_WithIPO_OnlyEmploymentData"> </class> 
+  <class name="com.web.HybrisAutomation.NonVAFormScripts.Hybris_WOFWithoutProduct_WithIPO_OnlyReferenceData"> </class> -->
+    
+ 
+ 
+ 
+ 
+                  <!--  <class name="com.web.HybrisAutomation.VAFormScripts.Hybris_VirtualApproval_Approved"> </class>
+                  <class name="com.web.HybrisAutomation.VAFormScripts.Hybris_VirtualApproval_Conditional"> </class>
+                  <class name="com.web.HybrisAutomation.VAFormScripts.Hybris_VirtualApproval_Decline"> </class>  
+ -->
+
+ 
+ 
+ 
+                    <!-- <class name="com.web.HybrisAutomation.ShortformScripts.Hybris_NonVA_SubmitContactInfo_FromHomePage"></class>
+                   <class name="com.web.HybrisAutomation.ShortformScripts.Hybris_NonVA_SubmitContactInfo_WithProduct">  </class> -->
+                   <!-- <class name="com.web.HybrisAutomation.ShortformScripts.Hybris_NonVA_SubmitContactInfo_FromGlobalHeader">  </class>
+                   <class name="com.web.HybrisAutomation.ShortformScripts.Hybris_SubmitContactInfo_VAForm"> </class>
+                    <class name="com.web.HybrisAutomation.ShortformScripts.Hybris_HTStore_SubmitContactInfo_FromGlobalHeader"> </class> 
+                    <class name="com.web.HybrisAutomation.ShortformScripts.Hybris_HTStore_SubmitContactInfo_FromHomePage"></class> 
+                   <class name="com.web.HybrisAutomation.ShortformScripts.Hybris_HTStore_SubmitContactInfo_WithProduct"></class> 
+                   
+ 
+ 
+ 
+ 
+                   <class name="com.web.HybrisAutomation.ContactUsScripts.Hybris_ContactUs_withoutStore_ValidData"> </class>
+                  <class name="com.web.HybrisAutomation.ContactUsScripts.Hybris_ContactUs_withStore_ValidData"> </class>  -->
+           
+       		
+             
+       		<!-- <class name="com.web.HybrisAutomation.NonVAFormScripts.Hybris_WOF_MonthlyPricing"> </class>
+       		<class name="com.web.HybrisAutomation.NonVAFormScripts.Hybris_WOF_SemiMonthlyPricing"> </class>
+       		<class name="com.web.HybrisAutomation.NonVAFormScripts.Hybris_WOF_WeeklyPricing"> </class> -->
+       					
+				
+ 	    </classes>
+	</test>
+	
+</suite> 

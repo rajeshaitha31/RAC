@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Selenium-Automation" parallel="tests" thread-count="2"
+	preserve-order="false" configfailurepolicy="continue" junit="false"
+	skipfailedinvocationcounts="false"  data-provider-thread-count="10"
+	group-by-instances="false" allow-return-values="false" >
+	<listeners>
+		<listener class-name="com.web.automation.listeners.ExecutionListener" />
+	</listeners>
+	<test name="Test-mobile-native" junit="false"
+		skipfailedinvocationcounts="false" preserve-order="true"
+		group-by-instances="false" allow-return-values="false" >
+		<parameter name="platform" value="windows" />
+		<parameter name="browser" value="chrome" />
+		<parameter name="version" value="6.0.1" />
+		<parameter name="environment" value="UAT" />
+		<parameter name="userRegion" value="US" />
+		<parameter name="seleniumGrid" value="false" />
+		<parameter name="localExecution" value="true" />
+		<parameter name="cloudExecution" value="false" />
+		
+		<parameter name="emailReport" value="false" />
+		<groups>
+			<run>
+				<include name="smoke" /> <include name="regression" />
+			</run>
+		</groups>
+		<classes>
+				
+		                     
+                  
+                 <class name="com.web.HybrisAutomation.UnsubscribeForDealsScripts.Hybris_UnsubscribeForDeals_FewMails"> </class>
+                 <class name="com.web.HybrisAutomation.UnsubscribeForDealsScripts.Hybris_UnsubscribeForDeals_Altogether"> </class>
+                 <class name="com.web.HybrisAutomation.UnsubscribeForDealsScripts.Hybris_UnsubscribeForDeals_DecidedToStay"> </class>
+                 <class name="com.web.HybrisAutomation.UnsubscribeForDealsScripts.Hybris_UnsubscribeForDeals_BlankData"> </class>
+                 <class name="com.web.HybrisAutomation.UnsubscribeForDealsScripts.Hybris_UnsubscribeForDeals_InvalidData"> </class> 
+                 <class name="com.web.HybrisAutomation.UnsubscribeForDealsScripts.Hybris_UnsubscribeForDeals_SetStore_Altogether"> </class>
+                 <class name="com.web.HybrisAutomation.UnsubscribeForDealsScripts.Hybris_UnsubscribeForDeals_SetStore_BlankData"> </class>
+                 <class name="com.web.HybrisAutomation.UnsubscribeForDealsScripts.Hybris_UnsubscribeForDeals_SetStore_DecidedToStay"> </class>
+                 <class name="com.web.HybrisAutomation.UnsubscribeForDealsScripts.Hybris_UnsubscribeForDeals_SetStore_FewMails"> </class>
+                 <class name="com.web.HybrisAutomation.UnsubscribeForDealsScripts.Hybris_UnsubscribeForDeals_SetStore_InvalidData"> </class>
+                  
+			       
+			                
+			       
+			       
+			       
+			       
+			       
+				
+				
+				
+				
+ 	    </classes>
+	</test>
+	
+</suite> 

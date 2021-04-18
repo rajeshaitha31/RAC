@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite thread-count="2" configfailurepolicy="continue" guice-stage="DEVELOPMENT" name="Failed suite [Selenium-Automation]" parallel="tests">
+  <parameter name="cloudExecution" value="false"/>
+  <parameter name="environment" value="UAT"/>
+  <parameter name="browser" value="chrome"/>
+  <parameter name="userRegion" value="US"/>
+  <parameter name="emailReport" value="false"/>
+  <parameter name="version" value="6.0.1"/>
+  <parameter name="platform" value="windows"/>
+  <parameter name="seleniumGrid" value="false"/>
+  <parameter name="localExecution" value="true"/>
+  <listeners>
+    <listener class-name="com.web.automation.listeners.ExecutionListener"/>
+  </listeners>
+  <test name="Test-mobile-native">
+    <parameter name="cloudExecution" value="false"/>
+    <parameter name="environment" value="UAT"/>
+    <parameter name="browser" value="chrome"/>
+    <parameter name="userRegion" value="US"/>
+    <parameter name="emailReport" value="false"/>
+    <parameter name="version" value="6.0.1"/>
+    <parameter name="platform" value="windows"/>
+    <parameter name="seleniumGrid" value="false"/>
+    <parameter name="localExecution" value="true"/>
+    <groups>
+      <run>
+        <include name="smoke"/>
+        <include name="regression"/>
+      </run>
+    </groups>
+    <classes>
+      <class name="com.web.HybrisAutomation.CheckoutScripts.Hybris_Checkouts_WeeklyPricing_SkipPayfone"/>
+    </classes>
+  </test> <!-- Test-mobile-native -->
+  <test name="Test-mobile-native(failed)" parallel="tests">
+    <parameter name="cloudExecution" value="false"/>
+    <parameter name="environment" value="UAT"/>
+    <parameter name="browser" value="chrome"/>
+    <parameter name="userRegion" value="US"/>
+    <parameter name="emailReport" value="false"/>
+    <parameter name="version" value="6.0.1"/>
+    <parameter name="platform" value="windows"/>
+    <parameter name="seleniumGrid" value="false"/>
+    <parameter name="localExecution" value="true"/>
+    <groups>
+      <run>
+        <include name="smoke"/>
+        <include name="regression"/>
+      </run>
+    </groups>
+    <classes>
+      <class name="com.web.HybrisAutomation.CheckoutScripts.Hybris_Checkouts_WeeklyPricing_SkipPayfone">
+        <methods>
+          <include name="Hybris_Reservations_WeeklyPricing_SkipPayfonenIDV_Test"/>
+          <include name="afterSuite"/>
+          <include name="beforeSuite"/>
+          <include name="afterTest"/>
+          <include name="beforeTest"/>
+          <include name="beforeMethod"/>
+          <include name="afterClass"/>
+          <include name="beforeClass"/>
+          <include name="beforeMethod"/>
+          <include name="afterMethod"/>
+        </methods>
+      </class> <!-- com.web.HybrisAutomation.CheckoutScripts.Hybris_Checkouts_WeeklyPricing_SkipPayfone -->
+    </classes>
+  </test> <!-- Test-mobile-native(failed) -->
+</suite> <!-- Failed suite [Selenium-Automation] -->

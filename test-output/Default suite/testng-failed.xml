@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]" parallel="none">
+  <test verbose="2" name="Default test">
+    <classes>
+<<<<<<< HEAD
+      <class name="com.web.HybrisAutomation.ReservationScripts.Hybris_Reservations_BiWeeklyPricing_SkipPayfone_SkipIDV_PromoApplied_Paypal"/>
+=======
+      <class name="com.web.HybrisAutomation.ReservationScripts.Hybris_Reservations_MonthlyPricing"/>
+>>>>>>> Dev
+    </classes>
+  </test> <!-- Default test -->
+  <test name="Default test(failed)" parallel="none">
+    <classes>
+<<<<<<< HEAD
+      <class name="com.web.HybrisAutomation.ReservationScripts.Hybris_Reservations_BiWeeklyPricing_SkipPayfone_SkipIDV_PromoApplied_Paypal">
+=======
+      <class name="com.web.HybrisAutomation.ReservationScripts.Hybris_Reservations_MonthlyPricing">
+>>>>>>> Dev
+        <methods>
+          <include name="Hybris_Reservations_MonthlyPricing_Test"/>
+          <include name="afterSuite"/>
+          <include name="beforeSuite"/>
+          <include name="afterTest"/>
+          <include name="beforeTest"/>
+          <include name="afterClass"/>
+          <include name="beforeClass"/>
+          <include name="beforeMethod"/>
+          <include name="afterMethod"/>
+          <include name="beforeMethod"/>
+<<<<<<< HEAD
+          <include name="Hybris_Reservations_BiWeeklyPricing_PromoApplied_SkipPayfone_SkipIDV_PaypalTest"/>
+        </methods>
+      </class> <!-- com.web.HybrisAutomation.ReservationScripts.Hybris_Reservations_BiWeeklyPricing_SkipPayfone_SkipIDV_PromoApplied_Paypal -->
+=======
+        </methods>
+      </class> <!-- com.web.HybrisAutomation.ReservationScripts.Hybris_Reservations_MonthlyPricing -->
+>>>>>>> Dev
+    </classes>
+  </test> <!-- Default test(failed) -->
+</suite> <!-- Failed suite [Default suite] -->

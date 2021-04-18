@@ -1,0 +1,222 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Selenium-Automation" parallel="tests" thread-count="2"
+	preserve-order="false" configfailurepolicy="continue" junit="false"
+	skipfailedinvocationcounts="false"  data-provider-thread-count="10"
+	group-by-instances="false" allow-return-values="false" >
+	<listeners>
+		<listener class-name="com.web.automation.listeners.ExecutionListener" />
+	</listeners>
+	<test name="Test-mobile-native" junit="false"
+		skipfailedinvocationcounts="false" preserve-order="true"
+		group-by-instances="false" allow-return-values="false" >
+		<parameter name="platform" value="windows" />
+		<parameter name="browser" value="chrome" />
+		<parameter name="version" value="6.0.1" />
+		<parameter name="environment" value="QA" />
+		<parameter name="userRegion" value="US" />
+		<parameter name="seleniumGrid" value="false" />
+		<parameter name="localExecution" value="true" />
+		<parameter name="cloudExecution" value="false" />
+		
+		<parameter name="emailReport" value="false" />
+		<groups>
+			<run>
+				<include name="smoke" /> <include name="regression" />
+			</run>
+		</groups>
+		<classes>
+				
+			     
+			    
+		   	     
+		   	     
+		          <!-- <class name="com.web.automation.scripts.Ecom_VA_ScreenValidations_ContactInfo_Invaliddata">
+		 	     </class> 
+		         <class name="com.web.automation.scripts.Ecom_VA_ScreenValidations_ApprovalInfo_Blankdata"> 
+		   	     </class>
+		         <class name="com.web.automation.scripts.Ecom_VA_ScreenValidations_ContactInfo_Blankdata"> 
+		   	     </class> 
+	             <class name="com.web.automation.scripts.Ecom_VA_ScreenValidations_ApprovalInfo_DuplicateData"> 
+		   	     </class> 
+	             <class name="com.web.automation.scripts.Ecom_VA_ScreenValidations_ApprovalInfo_Invaliddata"> 
+		   	     </class> 
+		   	     <class name="com.web.automation.scripts.Ecom_GetApproved_ContactInformation_ScreenValidations_BlankData"> 
+		   	     </class>  
+		         <class name="com.web.automation.scripts.Ecom_GetApproved_ContactInformation_ScreenValidations_InvalidData"> 
+		   	     </class>   
+		          <class name="com.web.automation.scripts.Ecom_GetApproved_HomePage_ScreenValidations_BlankData"> 
+		   	     </class>   
+		   	      -->
+		   	    
+		   	    
+					
+	       	    <!--  <class name="com.web.automation.scripts.Ecom_VerifyBrokenLinks"> 
+			        </class>   -->
+		
+		                
+			
+			
+			     <!--  <class name="com.web.automation.scripts.Ecom_SubmitContactInfo_FromHomePage">
+			     </class>  
+			    <class name="com.web.automation.scripts.Ecom_SubmitContactInfo_NonVAForm">   
+			   	 </class>  
+			   	 <class name="com.web.automation.scripts.Ecom_SubmitContactInfo_VAForm"> 
+			   	 </class>
+			   	 <class name="com.web.automation.scripts.Ecom_SubmitContactInfo_VAForm_NotReadyToSubmit"> 
+			   	 </class>
+			   	 <class name="com.web.automation.scripts.Ecom_SubmitContactInfo_VAForm_BackToRAC_SubmitContact"> 
+			   	 </class> 
+ -->
+
+
+
+	<!-- <class name="com.web.automation.scripts.Ecom_SubmitContactInfo_NonVAForm_NotReadyToSubmit"> 
+		</class>
+		 <class name="com.web.automation.scripts.Ecom_SubmitContactInfo_NonVAForm_BackToRAC_SubmitContact"> 
+		</class> -->
+			   	       
+			   	    
+			   	      
+			   	    
+	      	 
+	      	   <!-- <class name="com.web.automation.scripts.Ecom_SetStore_ValidZipCode"> 
+			     </class> 
+	  		     <class name ="com.web.automation.scripts.Ecom_SetStore_WithoutZip"> 
+		 	     </class> 
+		         <class name="com.web.automation.scripts.Ecom_SetStore_InvalidZipCode">
+			     </class>     
+			     <class name="com.web.automation.scripts.Ecom_SetStore_ChangeBaseStore">
+			     </class> 
+			     <class name="com.web.automation.scripts.Ecom_GA_SetStore_ValidStoreZip"> 
+			   	 </class>
+			     <class name="com.web.automation.scripts.Ecom_GA_SetStore_InvalidZip"> 
+			   	 </class>
+			     <class name="com.web.automation.scripts.Ecom_GA_SetStore_ZipNotFound"> 
+			   	 </class>
+			   	 <class name="com.web.automation.scripts.Ecom_GA_SetStore_ChangeBaseStore"> 
+			   	 </class>   
+			   	 <class name="com.web.automation.scripts.Ecom_SetStore_VA_BaseStore"> 
+		   	     </class>  -->
+			   		 
+			   		
+			   		 	   	   
+		       <!--    <class name="com.web.automation.scripts.Ecom_GetApproved_HomePage"> 
+			     </class> 
+			     <class name="com.web.automation.scripts.Ecom_GetApproved_PDPPage">
+			     </class>
+			     <class name="com.web.automation.scripts.Ecom_VirtualApproval_Approved">
+			     </class>   
+			     <class name="com.web.automation.scripts.Ecom_VirtualApproval_Declined">
+		 	     </class>
+	   	         <class name="com.web.automation.scripts.Ecom_VirtualApproval_Conditional"> 
+			     </class>       -->
+	   	      
+		 	
+		 	
+		 	<!--  <class name="com.web.automation.scripts.Ecom_PDPValidation_Scenario1">
+			     </class> 
+			     <class name="com.web.automation.scripts.Ecom_PDPValidation_Scenario2">
+			     </class>
+			     <class name="com.web.automation.scripts.Ecom_PDPValidation_Scenario3"> 
+			     </class>
+			     <class name="com.web.automation.scripts.Ecom_PDPValidation_Scenario4"> 
+			     </class> 
+			     <class name="com.web.automation.scripts.Ecom_PDPValidation_Scenario5"> 
+			     </class> 
+			     <class name="com.web.automation.scripts.Ecom_PDPValidation_Scenario6"> 
+			     </class> 
+			   	 <class name="com.web.automation.scripts.Ecom_PDPValidation_Scenario7"> 
+			     </class>
+			     <class name="com.web.automation.scripts.Ecom_PDPValidation_Scenario8"> 
+			     </class> 
+			     <class name="com.web.automation.scripts.Ecom_PDPValidation_Scenario9">  
+			     </class>
+			     <class name="com.web.automation.scripts.Ecom_PDPValidation_Scenario10"> 
+			     </class> 
+			     <class name="com.web.automation.scripts.Ecom_PDPValidation_Scenario11"> 
+			     </class>
+			     <class name="com.web.automation.scripts.Ecom_PDPValidation_Scenario12"> 
+			     </class>  -->
+			     
+			     
+	       
+	       
+	       <!--  <class name="com.web.automation.scripts.Ecom_SignUpForDeals_ValidData"> 
+			     </class> 
+			     <class name="com.web.automation.scripts.Ecom_SignUpForDeals_DifferentVerifyEmail"> 
+			     </class> 
+			     <class name="com.web.automation.scripts.Ecom_SignUpForDeals_BlankData"> 
+			     </class> 
+			     <class name="com.web.automation.scripts.Ecom_SignUpForDeals_InvalidEmail"> 
+			     </class>
+			     <class name="com.web.automation.scripts.Ecom_SignUpForDeals_VerifyEmail_Blank">  
+			     </class> 
+			     <class name="com.web.automation.scripts.Ecom_SignUpForDeals_SetStore_ValidData">
+			     </class>
+			     <class name="com.web.automation.scripts.Ecom_SignUpForDeals_SetStore_InvalidEmail">
+			     </class>
+			     <class name="com.web.automation.scripts.Ecom_SignUpForDeals_SetStore_BlankData">
+			     </class>
+			     <class name="com.web.automation.scripts.Ecom_SignUpForDeals_SetStore_DifferentVerifyEmail">
+			     </class>
+			     <class name="com.web.automation.scripts.Ecom_SignUpForDeals_setStore_VerifyEmail_Blank">
+			     </class>  -->
+			        
+			        
+			        
+	       
+	       
+	        <!-- <class name="com.web.automation.scripts.Ecom_Unsubscribe_FewEmails_ValidEmail"> 
+			     </class> 
+			     <class name="com.web.automation.scripts.Ecom_Unsubscribe_UnsubscribeDeals"> 
+			     </class> 
+			     <class name="com.web.automation.scripts.Ecom_Unsubscribe_DecidedToStay">  
+			     </class>
+			     <class name="com.web.automation.scripts.Ecom_Unsubscribe_InvalidEmail"> 
+			     </class> 
+			     <class name="com.web.automation.scripts.Ecom_Unsubscribe_BlankData"> 
+			     </class> 
+			     <class name="com.web.automation.scripts.Ecom_Unsubscribe_SetStore_FewEmails_ValidEmail">
+			     </class>
+			     <class name="com.web.automation.scripts.Ecom_Unsubscribe_SetStore_BlankData">
+			     </class>
+			     <class name="com.web.automation.scripts.Ecom_Unsubscribe_SetStore_DecidedToStay">
+			     </class>
+			     <class name="com.web.automation.scripts.Ecom_Unsubscribe_SetStore_InvalidEmail">
+			     </class>
+			     <class name="com.web.automation.scripts.Ecom_Unsubscribe_SetStore_UnsubscribeDeals">
+			     </class>  -->
+			         
+		 
+		 
+		 
+		        <!--  <class name="com.web.automation.scripts.Ecom_AcceptTimeOutWindow_VA">
+			     </class>  
+			     <class name="com.web.automation.scripts.Ecom_AcceptTimeOutWindow_NonVA">
+			     </class>
+			     <class name="com.web.automation.scripts.Ecom_IgnoreTimeOutWindow_NonVA">
+			     </class> 
+			     <class name="com.web.automation.scripts.Ecom_IgnoreTimeOutWindow_VA">
+			     </class> -->
+			        
+			        
+
+			      <!-- <class name="com.web.automation.scripts.Ecom_CustomerService_ValidData">   
+			     </class> 
+			     <class name="com.web.automation.scripts.Ecom_CustomerService_InValidData">   
+			     </class> 
+			     <class name="com.web.automation.scripts.Ecom_CustomerService_BlankData">   
+			     </class> 
+			     <class name="com.web.automation.scripts.Ecom_CustomerService_AcceptTimeout">  
+			     </class>   
+			     <class name="com.web.automation.scripts.Ecom_CustomerService_IgnoreTimeout">   
+			     </class> 
+			     <class name="com.web.automation.scripts.Ecom_CustomerService_ChangeStore">   
+			     </class>  -->
+			         
+			
+ 	    </classes>
+	</test>
+	
+</suite> 

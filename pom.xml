@@ -1,0 +1,492 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+
+	<groupId>Selenium_Automation</groupId>
+	<artifactId>Hybris_Upgrade</artifactId>
+	<version>0.0.1-SNAPSHOT</version>
+	<packaging>jar</packaging>
+
+	<name>Hybris_Upgrade</name>
+	<url>http://maven.apache.org</url>
+
+	<properties>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<selenium.version>3.3.1</selenium.version>
+		<appium.version>4.1.2</appium.version>
+		<appium.support>1.0.5</appium.support>
+		<testng.version>6.9.10</testng.version>
+		<extent.version>2.41.2</extent.version>
+		<selenium.mobile.version>2.39.0</selenium.mobile.version>
+		<apache.poi.version>3.14</apache.poi.version>
+		<selenium.3.version>3.0.0-beta1</selenium.3.version>
+		<amazon.version>1.11.29</amazon.version>
+		<restassured.version>2.9.0</restassured.version>
+		<log4j.version>1.2.17</log4j.version>
+		<slf4j.version>1.7.21</slf4j.version>
+		<winium.version>0.1.0-1</winium.version>
+	</properties>
+	<dependencies>
+		<dependency>
+			<groupId>io.appium</groupId>
+			<artifactId>java-client</artifactId>
+			<version>${appium.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>com.github.genium-framework</groupId>
+			<artifactId>Appium-Support</artifactId>
+			<version>${appium.support}</version>
+		</dependency>
+		<!-- Selenium dependencies :: Start -->
+		<!-- Selenium 3.0 dependencies :: Start -->
+		<dependency>
+			<groupId>org.seleniumhq.selenium</groupId>
+			<artifactId>selenium-java</artifactId>
+			<version>${selenium.3.version}</version>
+		</dependency>
+		<!-- https://mvnrepository.com/artifact/com.github.javafaker/javafaker -->
+<dependency>
+    <groupId>com.github.javafaker</groupId>
+    <artifactId>javafaker</artifactId>
+    <version>1.0.2</version>
+</dependency>
+		
+		<dependency>
+			<groupId>org.seleniumhq.selenium</groupId>
+			<artifactId>selenium-server</artifactId>
+			<version>${selenium.3.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.seleniumhq.selenium</groupId>
+			<artifactId>selenium-firefox-driver</artifactId>
+			<version>${selenium.3.version}</version>
+		</dependency>
+		<!-- Selenium 3.0 dependencies :: End -->
+			
+		<!-- <dependency> <groupId>org.seleniumhq.selenium</groupId> <artifactId>selenium-server</artifactId> 
+			<version>${selenium.version}</version> </dependency> <dependency> <groupId>org.seleniumhq.selenium</groupId> 
+			<artifactId>selenium-java</artifactId> <version>${selenium.version}</version> 
+			</dependency> <dependency> <groupId>org.seleniumhq.selenium</groupId> <artifactId>selenium-firefox-driver</artifactId> 
+			<version>${selenium.version}</version> </dependency> -->
+		<dependency>
+			<groupId>org.seleniumhq.selenium</groupId>
+			<artifactId>selenium-api</artifactId>
+			<version>${selenium.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.seleniumhq.selenium</groupId>
+			<artifactId>selenium-remote-driver</artifactId>
+			<version>${selenium.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.seleniumhq.selenium</groupId>
+			<artifactId>selenium-chrome-driver</artifactId>
+			<version>${selenium.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.seleniumhq.selenium</groupId>
+			<artifactId>selenium-ie-driver</artifactId>
+			<version>${selenium.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.seleniumhq.selenium</groupId>
+			<artifactId>selenium-safari-driver</artifactId>
+			<version>${selenium.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.seleniumhq.selenium</groupId>
+			<artifactId>selenium-iphone-driver</artifactId>
+			<version>${selenium.mobile.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.seleniumhq.selenium</groupId>
+			<artifactId>selenium-android-driver</artifactId>
+			<version>${selenium.mobile.version}</version>
+		</dependency>
+		<!-- Selenium dependencies :: End -->
+		<dependency>
+			<groupId>com.github.detro</groupId>
+			<artifactId>phantomjsdriver</artifactId>
+			<version>1.2.0</version>
+		</dependency>
+		<dependency>
+			<groupId>com.jayway.restassured</groupId>
+			<artifactId>rest-assured</artifactId>
+			<version>${restassured.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>joda-time</groupId>
+			<artifactId>joda-time</artifactId>
+			<version>2.8</version>
+		</dependency>
+		<dependency>
+			<groupId>org.json</groupId>
+			<artifactId>json</artifactId>
+			<version>20140107</version>
+		</dependency>
+		<dependency>
+			<groupId>com.jayway.jsonpath</groupId>
+			<artifactId>json-path</artifactId>
+			<version>0.8.1</version>
+		</dependency>
+		<dependency>
+			<groupId>log4j</groupId>
+			<artifactId>log4j</artifactId>
+			<version>${log4j.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.slf4j</groupId>
+			<artifactId>slf4j-log4j12</artifactId>
+			<version>${slf4j.version}</version>
+		</dependency>
+		<!-- Apache POI dependencies :: Start -->
+		<dependency>
+			<groupId>org.apache.poi</groupId>
+			<artifactId>poi</artifactId>
+			<version>${apache.poi.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.poi</groupId>
+			<artifactId>poi-ooxml</artifactId>
+			<version>${apache.poi.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.poi</groupId>
+			<artifactId>poi-ooxml-schemas</artifactId>
+			<version>${apache.poi.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.poi</groupId>
+			<artifactId>poi-excelant</artifactId>
+			<version>${apache.poi.version}</version>
+		</dependency>
+		<!-- https://mvnrepository.com/artifact/com.codoid.products/fillo -->
+		<dependency>
+		    <groupId>com.codoid.products</groupId>
+		    <artifactId>fillo</artifactId>
+		    <version>1.18</version>
+		    <scope>system</scope>
+			<systemPath>${project.basedir}\lib\fillo-1.18\fillo-1.18.jar</systemPath>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.poi</groupId>
+			<artifactId>poi-scratchpad</artifactId>
+			<version>${apache.poi.version}</version>
+		</dependency>
+		<!-- Apache POI dependencies :: End -->
+		<dependency>
+			<groupId>net.lightbody.bmp</groupId>
+			<artifactId>browsermob-core-littleproxy</artifactId>
+			<version>2.1.0-beta-2</version>
+		</dependency>
+		<dependency>
+			<groupId>net.lightbody.bmp</groupId>
+			<artifactId>browsermob-core</artifactId>
+			<version>2.1.0-beta-2</version>
+		</dependency>
+		<dependency>
+			<groupId>com.google.apis</groupId>
+			<artifactId>google-api-services-gmail</artifactId>
+			<version>v1-rev33-1.20.0</version>
+		</dependency>
+		<dependency>
+			<groupId>com.google.sitebricks</groupId>
+			<artifactId>sitebricks-client</artifactId>
+			<version>0.8.10</version>
+		</dependency>
+		<dependency>
+			<groupId>org.testng</groupId>
+			<artifactId>testng</artifactId>
+			<version>${testng.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>javax.mail</groupId>
+			<artifactId>javax.mail-api</artifactId>
+			<version>1.5.5</version>
+		</dependency>
+		<dependency>
+			<groupId>javax.mail</groupId>
+			<artifactId>mailapi</artifactId>
+			<version>1.4.3</version>
+		</dependency>
+		<!-- Amazon dependencies :: Start -->
+		<dependency>
+			<groupId>com.amazonaws</groupId>
+			<artifactId>aws-java-sdk</artifactId>
+			<version>${amazon.version}</version>
+		</dependency>
+		<!-- Amazon dependencies :: End -->
+		<!-- Winium dependencies :: Start -->
+		<dependency>
+			<groupId>com.github.2gis.winium</groupId>
+			<artifactId>winium-webdriver</artifactId>
+			<version>${winium.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>com.github.2gis.winium</groupId>
+			<artifactId>winium-elements-desktop</artifactId>
+			<version>${winium.version}</version>
+		</dependency>
+		<!-- Winium dependencies :: End -->
+		<!-- Local repository dependencies :: Start <dependency> <groupId>com.microsoft.sqlserver</groupId> 
+			<artifactId>sqljdbc</artifactId> <version>4.0</version> </dependency> -->
+		<dependency>
+			<groupId>sourceforge</groupId>
+			<artifactId>csvjdbc</artifactId>
+			<version>1.0.9</version>
+		</dependency>
+		<dependency>
+			<groupId>com.google.gdata</groupId>
+			<artifactId>core</artifactId>
+			<version>1.47.1</version>
+		</dependency>
+		<dependency>
+			<groupId>com.google.gdata</groupId>
+			<artifactId>gdata-spreadsheet</artifactId>
+			<version>3.0</version>
+		</dependency>
+		<dependency>
+			<groupId>com.google.gdata</groupId>
+			<artifactId>gdata-spreadsheet-meta</artifactId>
+			<version>3.0</version>
+		</dependency>
+		<dependency>
+			<groupId>com.google.gdata</groupId>
+			<artifactId>gdata-client</artifactId>
+			<version>1.0</version>
+		</dependency>
+		<dependency>
+			<groupId>com.google.gdata</groupId>
+			<artifactId>gdata-client-meta</artifactId>
+			<version>1.0</version>
+		</dependency>
+		<dependency>
+			<groupId>com.google.gdata</groupId>
+			<artifactId>gdata-docs</artifactId>
+			<version>3.0</version>
+		</dependency>
+		<dependency>
+			<groupId>com.google.gdata</groupId>
+			<artifactId>gdata-docs-meta</artifactId>
+			<version>3.0</version>
+		</dependency>
+		<dependency>
+			<groupId>com.google.gdata</groupId>
+			<artifactId>gdata-media</artifactId>
+			<version>1.0</version>
+		</dependency>
+		<!-- Local repository dependencies :: End -->
+		<!-- Extent Report dependencies :: Start -->
+		<dependency>
+			<groupId>com.relevantcodes</groupId>
+			<artifactId>extentreports</artifactId>
+			<version>${extent.version}</version>
+		</dependency>
+		
+		<!-- Extent Report dependencies :: End -->
+		<!-- ALM dependencies :: Start -->
+		
+		<!-- <dependency>
+			<groupId>ALM</groupId>
+			<artifactId>servicewrapper</artifactId>
+			<version>2.0</version>
+			<scope>system</scope>
+			<systemPath>${project.basedir}\lib\ALM\ATU_ALM_ServiceWrapper_2.0.jar</systemPath>
+			</dependency>
+		 -->	
+			<!-- ALM dependencies :: End -->
+				
+		<!-- pdfbox dependency -->
+<dependency>
+			<groupId>com.itextpdf</groupId>
+			<artifactId>itextpdf</artifactId>
+			<version>5.5.10</version>
+		</dependency>
+		
+		<!-- <dependency>
+			<groupId>net.sourceforge</groupId>
+			<artifactId>marathon</artifactId>
+			<version>5.0.4.0</version>
+			<scope>system</scope>
+			<systemPath>${project.basedir}/lib/javadriver/marathon-5.0.4.0.jar</systemPath>
+		</dependency>
+		<dependency>
+			<groupId>net.sourceforge</groupId>
+			<artifactId>marathon-core</artifactId>
+			<version>5.0.4</version>
+			<scope>system</scope>
+			<systemPath>${project.basedir}/lib/javadriver/marathon-core-5.0.4.0.jar</systemPath>
+		</dependency>
+		<dependency>
+			<groupId>net.sourceforge</groupId>
+			<artifactId>marathon-java</artifactId>
+			<version>5.0.4</version>
+			<scope>system</scope>
+			<systemPath>${project.basedir}/lib/javadriver/marathon-java-5.0.4.0.jar</systemPath>
+		</dependency>
+		<dependency>
+			<groupId>net.sourceforge</groupId>
+			<artifactId>marathon-java-agent</artifactId>
+			<version>5.0.4</version>
+			<scope>system</scope>
+			<systemPath>${project.basedir}/lib/javadriver/marathon-java-agent-5.0.4.0.jar</systemPath>
+		</dependency>
+		<dependency>
+			<groupId>net.sourceforge</groupId>
+			<artifactId>marathon-java-driver</artifactId>
+			<version>5.0.4</version>
+			<scope>system</scope>
+			<systemPath>${project.basedir}/lib/javadriver/marathon-java-driver-5.0.4.0.jar</systemPath>
+		</dependency>
+		<dependency>
+			<groupId>net.sourceforge</groupId>
+			<artifactId>marathon-javafxr</artifactId>
+			<version>5.0.4</version>
+			<scope>system</scope>
+			<systemPath>${project.basedir}/lib/javadriver/marathon-javafx-5.0.4.0.jar</systemPath>
+		</dependency>
+		<dependency>
+			<groupId>net.sourceforge</groupId>
+			<artifactId>marathon-javafx-agent</artifactId>
+			<version>5.0.4</version>
+			<scope>system</scope>
+			<systemPath>${project.basedir}/lib/javadriver/marathon-javafx-agent-5.0.4.0.jar</systemPath>
+		</dependency>
+		<dependency>
+			<groupId>net.sourceforge</groupId>
+			<artifactId>marathon-javafx-recorder</artifactId>
+			<version>5.0.4</version>
+			<scope>system</scope>
+			<systemPath>${project.basedir}/lib/javadriver/marathon-javafx-recorder-5.0.4.0.jar</systemPath>
+		</dependency>
+		<dependency>
+			<groupId>net.sourceforge</groupId>
+			<artifactId>marathon-javafx-recorder</artifactId>
+			<version>5.0.4</version>
+			<scope>system</scope>
+			<systemPath>${project.basedir}/lib/javadriver/marathon-javafx-recorder-5.0.4.0.jar</systemPath>
+		</dependency>
+		<dependency>
+			<groupId>net.sourceforge</groupId>
+			<artifactId>marathon-java-recorder</artifactId>
+			<version>5.0.4</version>
+			<scope>system</scope>
+			<systemPath>${project.basedir}/lib/javadriver/marathon-java-recorder-5.0.4.0.jar</systemPath>
+		</dependency>
+		<dependency>
+			<groupId>net.sourceforge</groupId>
+			<artifactId>marathon-java-runtime</artifactId>
+			<version>5.0.4</version>
+			<scope>system</scope>
+			<systemPath>${project.basedir}/lib/javadriver/marathon-java-runtime-5.0.4.0.jar</systemPath>
+		</dependency>
+		<dependency>
+			<groupId>net.sourceforge</groupId>
+			<artifactId>marathon-kbmap-tool</artifactId>
+			<version>5.0.4</version>
+			<scope>system</scope>
+			<systemPath>${project.basedir}/lib/javadriver/marathon-kbmap-tool-5.0.4.0.jar</systemPath>
+		</dependency>
+		<dependency>
+			<groupId>net.sourceforge</groupId>
+			<artifactId>marathon-test-helpers</artifactId>
+			<version>5.0.4</version>
+			<scope>system</scope>
+			<systemPath>${project.basedir}/lib/javadriver/marathon-test-helpers-5.0.4.0.jar</systemPath>
+		</dependency> -->
+		
+		
+		<!-- marathon dependencies end -->
+		<!-- pdfbox dependency -->
+		<dependency>
+			<groupId>org.apache.pdfbox</groupId>
+			<artifactId>pdfbox-app</artifactId>
+			<version>2.0.3</version>
+		</dependency>
+		<dependency>
+   <groupId>com.experitest</groupId>
+   <artifactId>seetest-appium</artifactId>
+   <version>10.8</version>
+   <scope>system</scope>
+   <systemPath>${project.basedir}/lib/Experitest/seetest-appium-10.8.jar</systemPath>
+   </dependency>
+		<dependency>
+			<groupId>com.itextpdf</groupId>
+			<artifactId>itextpdf</artifactId>
+			<version>5.5.10</version>
+		</dependency>
+		<!-- https://mvnrepository.com/artifact/org.apache.pdfbox/pdfbox -->
+<dependency>
+    <groupId>org.apache.pdfbox</groupId>
+    <artifactId>pdfbox</artifactId>
+    <version>2.0.7</version>
+</dependency>
+		<dependency>
+			<groupId>org.glassfish</groupId>
+			<artifactId>javax.json</artifactId>
+			<version>1.0.2</version>
+		</dependency>
+
+		<dependency>
+			<groupId>com.jcabi</groupId>
+			<artifactId>jcabi-xml</artifactId>
+			<version>0.18</version>
+		</dependency>
+	</dependencies>
+	<build>
+		<finalName>Selenium_Automation</finalName>
+		<plugins>
+			<!-- Following plugin executes the testng tests -->
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-surefire-plugin</artifactId>
+				<version>2.19.1</version>
+				<configuration>
+					<argLine>-Dfile.encoding=UTF-8</argLine>
+					<systemPropertyVariables>
+					</systemPropertyVariables>
+					<!-- Suite testng xml file to consider for test execution -->
+					<suiteXmlFiles>
+						<!-- <suiteXmlFile>${project.basedir}/testng_xmls/${suiteFile}</suiteXmlFile> -->
+						<suiteXmlFile>${project.basedir}/testng_xmls/testng.xml</suiteXmlFile>
+					</suiteXmlFiles>
+				</configuration>
+			</plugin>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-clean-plugin</artifactId>
+				<version>2.6.1</version>
+			</plugin>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<version>2.5.1</version>
+				<configuration>
+					<source>1.8</source>
+					<target>1.8</target>
+					<fork>true</fork>
+					<!-- <executable>${JAVA_HOME}/bin/javac</executable> -->
+					<compilerVersion>1.3</compilerVersion>
+				</configuration>
+			</plugin>
+		</plugins>
+	</build>
+	<repositories>
+      <repository>
+            <releases>
+                <enabled>true</enabled>
+                <updatePolicy>always</updatePolicy>
+                <checksumPolicy>fail</checksumPolicy>
+            </releases>
+            <id>Experitest.repo1</id>
+            <name>YourName</name>
+            <url>https://repo1.maven.org/maven2/</url>
+            <layout>default</layout>
+        </repository>
+        		<repository>
+			<id>my-Local</id>
+			<name>My Local Repository</name>
+			<url>file://${basedir}/lib</url>
+		</repository>
+	</repositories>
+</project>

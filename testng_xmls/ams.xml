@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Selenium-Automation" parallel="tests" thread-count="2"
+	preserve-order="false" configfailurepolicy="continue" junit="false"
+	skipfailedinvocationcounts="false"  data-provider-thread-count="10"
+	group-by-instances="false" allow-return-values="false" >
+	<listeners>
+		<listener class-name="com.web.automation.listeners.ExecutionListener" />
+	</listeners>
+	<test name="Test-mobile-native" junit="false"
+		skipfailedinvocationcounts="false" preserve-order="true"
+		group-by-instances="false" allow-return-values="false" >
+		<parameter name="platform" value="windows" />
+		<parameter name="browser" value="chrome" />
+		<parameter name="version" value="6.0.1" />
+		<parameter name="environment" value="QA" />
+		<parameter name="userRegion" value="US" />
+		<parameter name="seleniumGrid" value="false" />
+		<parameter name="localExecution" value="true" />
+		<parameter name="cloudExecution" value="false" />
+		
+		<parameter name="emailReport" value="false" />
+		<groups>
+			<run>
+				<include name="smoke" /> <include name="regression" />
+			</run>
+		</groups>
+		<classes>
+				
+			
+			      <!--  <class name="com.web.automation.amsscripts.Ecom_AMS_AddACHPaymentMehod_ValidData">
+			      </class> 
+			      <class name="com.web.automation.amsscripts.Ecom_AMS_AddACHPaymentMehod_BlankData">
+			      </class> 
+			      <class name="com.web.automation.amsscripts.Ecom_AMS_AddACHPaymentMehod_InvalidData">
+			      </class>
+			      <class name="com.web.automation.amsscripts.Ecom_AMS_DeletePaymentMehod_ACH">
+			      </class> 
+			      <class name="com.web.automation.amsscripts.Ecom_AMS_AddCreditCardPaymentMehod_ValidData">
+			      </class>
+			      <class name="com.web.automation.amsscripts.Ecom_AMS_AddCreditCardPaymentMehod_InvalidData">
+			      </class>
+			      <class name="com.web.automation.amsscripts.Ecom_AMS_AddCreditCardPaymentMehod_BlankData">
+			      </class>
+			      <class name="com.web.automation.amsscripts.Ecom_AMS_DeletePaymentMehod_Credicard">
+			      </class>
+			      <class name="com.web.automation.amsscripts.Ecom_AMS_AddMorethanThree_PaymentMethods">
+			      </class>    -->
+			    
+			    
+			   <!--    <class name="com.web.automation.amsscripts.Ecom_AMS_EnrollAutoPay_FromAgreements_CreditCard">
+			      </class>
+			      <class name="com.web.automation.amsscripts.Ecom_AMS_EnrollAutoPay_FromPaymentPage_CreditCard">
+			      </class>
+			      <class name="com.web.automation.amsscripts.Ecom_AMS_EnrollAutoPay_FromAgreements_ACH">
+			      </class> 
+			      <class name="com.web.automation.amsscripts.Ecom_AMS_EnrollAutoPay_FromPaymentPage_ACH">
+			      </class>
+			      <class name="com.web.automation.amsscripts.Ecom_AMS_UnEnrollAutoPay_FromAgreements_CreditCard">
+			      </class>
+			      <class name="com.web.automation.amsscripts.Ecom_AMS_UnEnrollAutoPay_FromPaymentPage_CreditCard">
+			      </class>
+			      <class name="com.web.automation.amsscripts.Ecom_AMS_UnEnrollAutoPay_FromPaymentPage_ACH">
+			      </class>
+			      <class name="com.web.automation.amsscripts.Ecom_AMS_UnEnrollAutoPay_FromAgreements_ACH">
+			      </class>  -->
+			       
+			  <!--     
+			      <class name="com.web.automation.amsscripts.Ecom_AMS_AccountProfile_EditAddress_ValidData">
+			      </class> 
+			      <class name="com.web.automation.amsscripts.Ecom_AMS_AccountProfile_EditAddress_InvalidData">
+			      </class>
+			      <class name="com.web.automation.amsscripts.Ecom_AMS_AccountProfile_EditAddress_BlankData">
+			      </class> 
+			      <class name="com.web.automation.amsscripts.Ecom_AMS_AccountProfile_EditPersonalInfo_Email_BlankData">
+			      </class>
+			       <class name="com.web.automation.amsscripts.Ecom_AMS_AccountProfile_EditPersonalInfo_Email_InvalidData">
+			      </class>
+			      <class name="com.web.automation.amsscripts.Ecom_AMS_AccountProfile_EditPersonalInfo_Email_ValidData">
+			      </class> 
+			       <class name="com.web.automation.amsscripts.Ecom_AMS_AccountProfile_EditPersonalInfo_Email_DifferentEmail">
+			      </class>
+			       <class name="com.web.automation.amsscripts.Ecom_AMS_AccountProfile_EditPersonalInfo_ContactDetails_BlankData">
+			      </class>
+			        <class name="com.web.automation.amsscripts.Ecom_AMS_AccountProfile_EditPersonalInfo_ContactDetails_InvalidData">
+			      </class>
+			       <class name="com.web.automation.amsscripts.Ecom_AMS_AccountProfile_EditPersonalInfo_ContactDetails_ValidData">
+			      </class>
+			       -->
+			      
+			      
+			          
+ 	    </classes>
+	</test>
+	
+</suite>
